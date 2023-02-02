@@ -1,0 +1,98 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+}
+h1 {
+  text-align: center;
+}
+.progressBarWrapper {
+  background-color: hsl(0deg 0% 95%);
+  height: 70px;
+  padding-top: 17px;
+  box-sizing: border-box;
+}
+.checkpoints {
+  display: flex;
+  margin-left: 50px;
+}
+.checkpoint {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+  background-color: hsl(0deg 0% 95%);
+}
+.checkpointIndex {
+  width: 20px;
+  border-radius: 100%;
+  color: whitesmoke;
+  background-color: hsl(0deg 66% 40%);
+  text-align: center;
+  transition: background-color 2s;
+}
+.checkpointName {
+  width: 150px;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: bold;
+  transition: color 2s;
+}
+
+progress[value] {
+  position: absolute;
+  top: 24px;
+  -webkit-appearance: none;
+  background-color: hsl(0deg 0% 86%);
+  appearance: none;
+  width: 100%;
+  height: 4px;
+}
+progress[value]::-webkit-progress-bar {
+  background-color: transparent;
+}
+progress[value]::-webkit-progress-value {
+  background-color: hsl(0deg 66% 40%);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  transition: width 2s;
+}
